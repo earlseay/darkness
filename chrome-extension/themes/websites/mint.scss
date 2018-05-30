@@ -49,7 +49,7 @@ input {
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
-// Toolbar
+// Toolbars and Navigation
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 
 // top header toolbar background
@@ -63,16 +63,53 @@ input {
 }
 
 //main logo and sticky help box
-#mintLogo, #ozen, #logo{
+#mintLogo, #ozen, #logo, #logo-link {
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(100%);
 }
 
 //main nav bar
-.navbar-nav a{
+.navbar-nav a {
 	color: $theme-link !important;
 }
 
-.navbar-nav a.visited{
+.navbar-nav a.visited {
 	color: $theme-link-visited !important;
+}
+
+.nr-side-widget-opener[style] {
+	background: $theme-button-background !important;
+}
+
+.account-header-wrapper {
+	.balance {
+		color: $theme-text-faint;
+	}
+}
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+// Budget Box
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+
+//the progress bar int he budget box
+.bar {
+	span {
+		@include invert-back();
+	}
+}
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+// Cashflow box
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+.module-cashflow-content {
+	.horizontal-bar {
+		li {
+			@include invert-back();
+		}
+	}
+	.vertical-bar {
+		.bucket {
+			@include invert-back();
+		}
+	}
 }
